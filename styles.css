@@ -65,7 +65,7 @@ main {
 
 .card img {
     width: 130%;
-    transform: rotate(-25deg);
+    transform: rotate(25deg);
     position: absolute;
     top: 10rem;
     right: -1rem;
@@ -109,10 +109,22 @@ main {
     cursor: pointer;
 }
 
+footer {
+    height: 80px;
+}
+
 /*Dark Theme*/
+
+body.dark {
+    background-color: #263238;
+}
 
 .dark, .dark header {
     color: #FFF;
+    background-color: #263238;
+}
+
+.dark main {
     background-color: #263238;
 }
 
@@ -133,13 +145,56 @@ main {
 }
 
 .dark .subtitle {
-    color: #67B4F3;
+    color: #EE79AC;
 }
 
 .dark .description {
-    color: #2196F3
+    color: #ee93bb
 }
 
 .dark .btn {
-    background-color: #67B4F3;
+    background-color: #EE79AC;
+}
+
+.dark footer {
+    background-color: #263238;
+}
+
+@media (max-width: 1224px) {
+    .card {
+        flex-direction: column;
+    }
+
+    .card-image, .card-details {
+        width: 100%;
+        padding: 2rem;
+    }
+
+    .card img {
+        width: 50%;
+        position: unset;
+    }
+}
+
+@media (max-width: 640px) {
+
+    .card {
+        width: 90%;
+    }
+
+    .card-image span {
+        font-size: 4rem;
+    }
+
+    .card-details h2 {
+        font-size: 2rem;
+    }
+
+    .price-container {
+        flex-direction: column;
+    }
+
+    .btn {
+        margin-top: 1rem;
+    }
 }
